@@ -14,7 +14,6 @@ public class PersonDetails {
     //For bank accounts
     long bankNumber;
     String expirationDate;
-    String nameOnCard;
     int CVVNumber;
 
     //Contructor for phone directory
@@ -27,6 +26,7 @@ public class PersonDetails {
         this.phone2 = phone2;
     }
 
+    //Contructor for Aadhaar
     public PersonDetails(String name, int age, String address, String gender, long aadhaarNumber){
         this.name = name;
         this.address = address;
@@ -35,14 +35,14 @@ public class PersonDetails {
         this.aadhaarNumber = aadhaarNumber;
     }
 
-    public PersonDetails(String name, int age, String address, String gender, long bankNumber, String expirationDate, String nameOfCard, int CVVNumber){
+    //Contructor for Bank
+    public PersonDetails(String name, int age, String address, String gender, long bankNumber, String expirationDate, int CVVNumber){
         this.name = name;
         this.address = address;
         this.gender = gender;
         this.age = age;
         this.bankNumber = bankNumber;
         this.expirationDate = expirationDate;
-        this.nameOnCard = nameOfCard;
         this.CVVNumber = CVVNumber;
     }
 
@@ -118,13 +118,6 @@ public class PersonDetails {
         this.expirationDate = expirationDate;
     }
 
-    public String getNameOnCard() {
-        return nameOnCard;
-    }
-
-    public void setNameOnCard(String nameOnCard) {
-        this.nameOnCard = nameOnCard;
-    }
 
     public int getCVVNumber() {
         return CVVNumber;

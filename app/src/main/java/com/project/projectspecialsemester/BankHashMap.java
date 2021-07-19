@@ -3,17 +3,17 @@ package com.project.projectspecialsemester;
 import java.util.HashMap;
 
 public class BankHashMap {
-    HashMap<String, PersonDetails> BankHashMap;
+    HashMap<Integer, PersonDetails> BankHashMap;
 
     public BankHashMap(){
         BankHashMap = new HashMap<>();
     }
 
     public void insertBankHashMap(){
-        BankHashMap.put("Kanishk",new PersonDetails("Kanishk", 20,"Noida", "Male",123456789011L));
+        BankHashMap.put(1,new PersonDetails("Kanishk", 20,"Noida", "Male",123456789111L,"19/7/2022",123));
     }
 
-    public PersonDetails findBankHashMap(String key){
+    public PersonDetails findBankHashMap(int key){
         if (BankHashMap.containsKey(key)){
             PersonDetails details = BankHashMap.get(key);
             return details;
@@ -22,7 +22,7 @@ public class BankHashMap {
         }
     }
 
-    public boolean deleteBankHashMap(String key){
+    public boolean deleteBankHashMap(int key){
         if (BankHashMap.containsKey(key)){
             BankHashMap.remove(key);
             return true;
@@ -31,7 +31,7 @@ public class BankHashMap {
         }
     }
 
-    public boolean updateBankHashMap(String key, PersonDetails newDetails){
+    public boolean updateBankHashMap(int key, PersonDetails newDetails){
         if (BankHashMap.containsKey(key)){
             BankHashMap.put(key, newDetails);
             return true;
@@ -40,7 +40,7 @@ public class BankHashMap {
         }
     }
 
-    public HashMap<String, PersonDetails> getBankHashMap(){
+    public HashMap<Integer, PersonDetails> getBankHashMap(){
         return BankHashMap;
     }
 
